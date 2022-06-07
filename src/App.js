@@ -5,6 +5,11 @@ import Home from "./components/Home";
 
 const App = () => {
   const [animes, setAnimes] = useState([]);
+  const [input, setInput] = useState({name:"", yearReleased:"", genre:""})
+
+  const handleChange = (event) => {
+    setInput({...input, [event.target.name]: event.target.value})
+  }
 
   useEffect(() => {
     getAnimes();
@@ -36,10 +41,16 @@ const App = () => {
 
   return (
     <div>
-      <h1>hi</h1>
+      <form>
+          <input onChange={handleChange} value={input.name} type="text" placeholder="name" />
+          <input onChange={handleChange} value={input.yearReleased} type="text" placeholder='year released' />
+          <input onChange={handleChange} value={input.genre} type="text" placeholder= "genre" />
+      </form>
+
       <Routes>
         <Route path="/" element={<Home animes={displayAnime} />} />
       </Routes>
+     
     </div>
   );
 };
