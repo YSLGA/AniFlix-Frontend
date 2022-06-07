@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import apiUrl from "../apiUrl";
 
 const Home = (props) => {
     const [name, setName] = useState("");
@@ -9,18 +10,13 @@ const Home = (props) => {
     const postAnime = async () => {
         let payload = { name: name, yearReleased: year, genre: genre };
         try {
-            let response = await axios.post(
-                `https://anime-mern-backend.herokuapp.com/animes/`,
-                payload
-            );
+            let response = await axios.post(`${apiUrl}/animes/`, payload);
             console.log(response.data);
         } catch (ex) {
             console.log(ex);
         }
         try {
-            let response = await axios.get(
-                `https://anime-mern-backend.herokuapp.com/animes/`
-            );
+            let response = await axios.get(`${apiUrl}/animes/`);
             console.log(response.data);
             props.setAnime(response.data.animes);
         } catch (ex) {

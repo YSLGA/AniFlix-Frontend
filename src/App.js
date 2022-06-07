@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import axios from "axios";
 import Home from "./components/Home";
+import AnimeItem from "./components/AnimeItem";
+import apiUrl from "./apiUrl";
 
 const App = () => {
     const [animes, setAnimes] = useState([]);
@@ -12,9 +14,7 @@ const App = () => {
 
     const getAnimes = async () => {
         try {
-            let response = await axios.get(
-                `https://anime-mern-backend.herokuapp.com/animes/`
-            );
+            let response = await axios.get(`${apiUrl}/animes`);
             console.log(response.data);
             setAnimes(response.data.animes);
         } catch (ex) {
@@ -42,6 +42,10 @@ const App = () => {
                     element={
                         <Home animes={displayAnime} setAnime={setAnimes} />
                     }
+                />
+                <Route
+                    path="/:_id"
+                    element={<AnimeItem setAnime={setAnimes} />}
                 />
             </Routes>
         </div>
