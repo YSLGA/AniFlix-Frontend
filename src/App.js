@@ -42,9 +42,9 @@ const App = () => {
   return (
     <div>
       <form>
-          <input onChange={handleChange} value={input.name} type="text" placeholder="name" />
-          <input onChange={handleChange} value={input.yearReleased} type="text" placeholder='year released' />
-          <input onChange={handleChange} value={input.genre} type="text" placeholder= "genre" />
+          <input onChange={handleChange} value={input.name} name="name"type="text" placeholder="name" />
+          <input onChange={handleChange} value={input.yearReleased} name="yearReleased" type="text" placeholder='year released' />
+          <input onChange={handleChange} value={input.genre} name="genre"type="text" placeholder= "genre" />
       </form>
 
       <Routes>
