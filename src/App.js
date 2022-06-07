@@ -11,6 +11,30 @@ const App = () => {
     setInput({...input, [event.target.name]: event.target.value})
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefualt()
+
+    fetch('https://anime-mern-backend.herokuapp.com/animes', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(input)
+    })
+    .then(response => response.json())
+    .then(data => {
+      const copy = [...animes]
+      copy.push(data.animes)
+      setAnimes(copy)
+      setInput({name:"", yearReleased:"", genre:""})
+    })
+
+
+  }
+
+
+
   useEffect(() => {
     getAnimes();
   }, []);
@@ -41,10 +65,11 @@ const App = () => {
 
   return (
     <div>
-      <form>
-          <input onChange={handleChange} value={input.name} name="name"type="text" placeholder="name" />
+      <form onSubmit={handleSubmit}>
+          <input onChange={handleChange} value={input.name} name="name" type="text" placeholder="name" />
           <input onChange={handleChange} value={input.yearReleased} name="yearReleased" type="text" placeholder='year released' />
-          <input onChange={handleChange} value={input.genre} name="genre"type="text" placeholder= "genre" />
+          <input onChange={handleChange} value={input.genre} name="genre" type="text" placeholder= "genre" />
+          <input type="submit" value="add to list" />
       </form>
 
       <Routes>
