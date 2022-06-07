@@ -25,6 +25,24 @@ const AnimeItem = (props) => {
         setGenre(event.target.value);
     };
 
+    const patchReq = async () => {
+        let payload = { name: name, yearReleased: year, genre: genre }
+        try {
+            let response = await axios.patch(`${apiUrl}/animes/${params._id}`, payload);
+            console.log(response.data.animes)
+        } catch(ex){
+            console.log(ex)
+        }
+    }
+
+    const handleSubmit = () =>{
+        patchReq()
+        setName("")
+        setYear("")
+        setGenre("")
+    }
+
+
     const getReq = async () => {
         try {
             let response = await axios.get(`${apiUrl}/animes/${params._id}`);
@@ -38,6 +56,14 @@ const AnimeItem = (props) => {
 
     return (
         <div>
+            <form onSubmit={handleSubmit}>
+                <input onChange={handleNameChange} value ={name} type="text" placeholder="name" />
+                <input onChange={handleYearChange} value={year}type="text" placeholder="year released" />
+                <input onChange={handleGenreChange} value={genre}type="text" placeholder="genre" />
+                <input type="submit" value="edit" />
+                <button></button>
+            </form>
+
             <ul>
                 <li>
                     <p>Name: {id.name}</p>
