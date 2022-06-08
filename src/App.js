@@ -30,6 +30,7 @@ const App = () => {
                     <p>Name: {anime.name}</p>
                     <p>Year Released: {anime.yearReleased}</p>
                     <p>Genre: {anime.genre}</p>
+                    <img src={anime.image} />
                 </li>
             </Link>
         );
