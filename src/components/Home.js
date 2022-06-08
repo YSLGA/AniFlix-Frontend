@@ -6,7 +6,6 @@ const Home = (props) => {
   const [name, setName] = useState("");
   const [year, setYear] = useState("");
   const [genre, setGenre] = useState("");
-  const [user, setUser] = useState("");
 
   const postAnime = async () => {
     let payload = { name: name, yearReleased: year, genre: genre };
@@ -27,21 +26,12 @@ const Home = (props) => {
 
   ////////////////////////////////
 
-  const postUser = async () => {
-    let payload = { name: user };
-    try {
-      let response = await axios.post(`${apiUrl}/users/`, payload);
-      console.log(response.data);
-    } catch (ex) {
-      console.log(ex);
-    }
-  };
-
   ////////////////////////////////
 
   const handleSubmit = (event) => {
     event.preventDefault();
     postAnime();
+    props.userPost();
     setName("");
     setYear("");
     setGenre("");
@@ -55,10 +45,6 @@ const Home = (props) => {
   };
   const handleGenreChange = (event) => {
     setGenre(event.target.value);
-  };
-
-  const handleUserChange = (event) => {
-    setUser(event.target.value);
   };
 
   return (
@@ -84,8 +70,8 @@ const Home = (props) => {
         />
 
         <input
-          onChange={handleUserChange}
-          value={user}
+          onChange={props.userChange}
+          value={props.user}
           type="text"
           placeholder="username"
         />

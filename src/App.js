@@ -8,7 +8,7 @@ import Team from "./components/Team";
 
 const App = () => {
   const [animes, setAnimes] = useState([]);
-  const [user, setUser] = useState("");
+  const [users, setUsers] = useState("");
 
   useEffect(() => {
     getAnimes();
@@ -27,7 +27,7 @@ const App = () => {
   //////////////////////////
 
   const postUser = async () => {
-    let payload = { name: user };
+    let payload = { name: users };
     try {
       let response = await axios.post(`${apiUrl}/users/`, payload);
       console.log(response.data);
@@ -38,9 +38,13 @@ const App = () => {
 
   ///////////////////////////////
 
-  const displayUser = users.map((user, key) => {
-    return <p key={key}>Username: {user.name}</p>;
-  });
+  const handleUserChange = (event) => {
+    setUsers(event.target.value);
+  };
+
+  //   const displayUser = users.map((user, key) => {
+  //     return <p key={key}>Username: {user.name}</p>;
+  //   });
 
   const displayAnime = animes.map((anime) => {
     return (
@@ -70,7 +74,16 @@ const App = () => {
       <Routes>
         <Route
           path="/"
-          element={<Home animes={displayAnime} setAnime={setAnimes} />}
+          element={
+            <Home
+              animes={displayAnime}
+              setAnime={setAnimes}
+              //   users={displayUser}
+              userPost={postUser}
+              userChange={handleUserChange}
+              user={users}
+            />
+          }
         />
         <Route path="/:_id" element={<AnimeItem setAnime={setAnimes} />} />
         <Route path="/Team" element={<Team />} />
