@@ -27,6 +27,18 @@ const Home = (props) => {
 
   ////////////////////////////////
 
+  const postUser = async () => {
+    let payload = { name: user };
+    try {
+      let response = await axios.post(`${apiUrl}/users/`, payload);
+      console.log(response.data);
+    } catch (ex) {
+      console.log(ex);
+    }
+  };
+
+  ////////////////////////////////
+
   const handleSubmit = (event) => {
     event.preventDefault();
     postAnime();

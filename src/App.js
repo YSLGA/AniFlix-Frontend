@@ -8,6 +8,7 @@ import Team from "./components/Team";
 
 const App = () => {
   const [animes, setAnimes] = useState([]);
+  const [user, setUser] = useState("");
 
   useEffect(() => {
     getAnimes();
@@ -22,6 +23,24 @@ const App = () => {
       console.log(ex);
     }
   };
+
+  //////////////////////////
+
+  const postUser = async () => {
+    let payload = { name: user };
+    try {
+      let response = await axios.post(`${apiUrl}/users/`, payload);
+      console.log(response.data);
+    } catch (ex) {
+      console.log(ex);
+    }
+  };
+
+  ///////////////////////////////
+
+  const displayUser = users.map((user, key) => {
+    return <p key={key}>Username: {user.name}</p>;
+  });
 
   const displayAnime = animes.map((anime) => {
     return (
