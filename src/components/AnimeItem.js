@@ -10,6 +10,7 @@ const AnimeItem = (props) => {
   const [name, setName] = useState("");
   const [year, setYear] = useState("");
   const [genre, setGenre] = useState("");
+  const [image, setImage] = useState("");
 
   useEffect(() => {
     getReq();
@@ -24,9 +25,12 @@ const AnimeItem = (props) => {
   const handleGenreChange = (event) => {
     setGenre(event.target.value);
   };
+  const handleImageChange = (event) => {
+    setImage(event.target.value);
+  };
 
   const patchReq = async () => {
-    let payload = { name: name, yearReleased: year, genre: genre };
+    let payload = { name: name, yearReleased: year, genre: genre, image: image };
     try {
       let response = await axios.patch(
         `${apiUrl}/animes/${params._id}`,
@@ -43,6 +47,7 @@ const AnimeItem = (props) => {
     setName("");
     setYear("");
     setGenre("");
+    setImage("");
   };
 
   const deleteReq = async () => {
@@ -98,6 +103,12 @@ const AnimeItem = (props) => {
           type="text"
           placeholder="genre"
         />
+        <input
+          type="text"
+          value={image}
+          onChange={handleImageChange}
+          placeholder="image"
+        />
         <input type="submit" value="edit" />
         <button onClick={handleClick}>delete</button>
       </form>
@@ -107,6 +118,7 @@ const AnimeItem = (props) => {
           <p>Name: {id.name}</p>
           <p>Year Released: {id.yearReleased}</p>
           <p>Genre: {id.genre}</p>
+          <img src={id.image}/>
         </li>
       </ul>
     </div>
