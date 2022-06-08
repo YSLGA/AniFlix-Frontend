@@ -4,6 +4,7 @@ import axios from "axios";
 import Home from "./components/Home";
 import AnimeItem from "./components/AnimeItem";
 import apiUrl from "./apiUrl";
+import Team from "./components/Team";
 
 const App = () => {
   const [animes, setAnimes] = useState([]);
@@ -41,7 +42,7 @@ const App = () => {
           <Link to="/">
             <li>Home</li>
           </Link>
-          <Link to="/">
+          <Link to="/Team">
             <li>Team</li>
           </Link>
         </ul>
@@ -53,6 +54,7 @@ const App = () => {
           element={<Home animes={displayAnime} setAnime={setAnimes} />}
         />
         <Route path="/:_id" element={<AnimeItem setAnime={setAnimes} />} />
+        <Route path="/Team" element={<Team />} />
       </Routes>
     </div>
   );
