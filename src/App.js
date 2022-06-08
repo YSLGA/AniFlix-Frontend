@@ -12,6 +12,7 @@ const App = () => {
 
   useEffect(() => {
     getAnimes();
+    getUsers();
   }, []);
 
   const getAnimes = async () => {
@@ -36,15 +37,25 @@ const App = () => {
     }
   };
 
+  const getUsers = async () => {
+    try {
+      let response = await axios.get(`${apiUrl}/users`);
+      console.log(response.data);
+      setUsers(response.data.users);
+    } catch (ex) {
+      console.log(ex);
+    }
+  };
+
   ///////////////////////////////
 
   const handleUserChange = (event) => {
     setUsers(event.target.value);
   };
 
-  //   const displayUser = users.map((user, key) => {
-  //     return <p key={key}>Username: {user.name}</p>;
-  //   });
+  const displayUser = users.map((user, key) => {
+    return <p key={key}>Username: {user.name}</p>;
+  });
 
   const displayAnime = animes.map((anime) => {
     return (
@@ -53,6 +64,7 @@ const App = () => {
           <p>Name: {anime.name}</p>
           <p>Year Released: {anime.yearReleased}</p>
           <p>Genre: {anime.genre}</p>
+          <p>User: {displayUser}</p>
         </li>
       </Link>
     );
@@ -78,7 +90,7 @@ const App = () => {
             <Home
               animes={displayAnime}
               setAnime={setAnimes}
-              //   users={displayUser}
+              users={displayUser}
               userPost={postUser}
               userChange={handleUserChange}
               user={users}

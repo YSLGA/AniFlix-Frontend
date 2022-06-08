@@ -35,6 +35,7 @@ const Home = (props) => {
     setName("");
     setYear("");
     setGenre("");
+    props.getUsers();
   };
 
   const handleNameChange = (event) => {
