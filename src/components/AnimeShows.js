@@ -59,41 +59,25 @@ const AnimeShows = (props) => {
           onChange={handleNameChange}
           value={name}
           type="text"
-<<<<<<< HEAD
-          placeholder="name"
-=======
           placeholder="Enter Anime Show"
->>>>>>> cd73e3091f900d1c1530d3aa303bac1e01f1a16d
         />
         <input
           onChange={handleYearChange}
           value={year}
           type="text"
-<<<<<<< HEAD
-          placeholder="year released"
-=======
           placeholder="Year Released"
->>>>>>> cd73e3091f900d1c1530d3aa303bac1e01f1a16d
         />
         <input
           onChange={handleGenreChange}
           value={genre}
           type="text"
-<<<<<<< HEAD
-          placeholder="genre"
-=======
           placeholder="Genre"
->>>>>>> cd73e3091f900d1c1530d3aa303bac1e01f1a16d
         />
         <input
           type="text"
           value={image}
           onChange={handleImageChange}
-<<<<<<< HEAD
-          placeholder="image"
-=======
           placeholder="Image"
->>>>>>> cd73e3091f900d1c1530d3aa303bac1e01f1a16d
         />
         <input type="submit" value="add to list" />
       </form>
