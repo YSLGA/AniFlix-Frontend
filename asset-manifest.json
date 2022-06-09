@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/anime-list-frontend/static/js/main.95041f2e.js",
+    "index.html": "/anime-list-frontend/index.html",
+    "main.95041f2e.js.map": "/anime-list-frontend/static/js/main.95041f2e.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.95041f2e.js"
+  ]
+}
