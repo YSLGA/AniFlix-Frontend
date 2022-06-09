@@ -1,6 +1,6 @@
 let apiUrl;
 const apiUrls = {
-  production: "https://anime-backendv2.herokuapp.com/",
+  production: "https://anime-backendv2.herokuapp.com",
   development: "http://localhost:4000",
 };
 
