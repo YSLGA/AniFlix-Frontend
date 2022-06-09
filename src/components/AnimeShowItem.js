@@ -88,8 +88,8 @@ const AnimeShowItem = (props) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="animeShowItem">
+      <form className="animeShowItem-text-fields" onSubmit={handleSubmit}>
         <input
           onChange={handleNameChange}
           value={name}

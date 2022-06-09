@@ -53,8 +53,8 @@ const AnimeShows = (props) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className ="animeShows">
+      <form className="show-text-fields"onSubmit={handleSubmit}>
         <input
           onChange={handleNameChange}
           value={name}
@@ -79,7 +79,7 @@ const AnimeShows = (props) => {
           onChange={handleImageChange}
           placeholder="Image"
         />
-        <input type="submit" value="add to list" />
+        <input type="submit" value="add to show list" />
       </form>
       <ul>{props.animes}</ul>
     </div>

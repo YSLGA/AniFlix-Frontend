@@ -65,7 +65,7 @@ const AnimeMovieItem = (props) => {
     try {
       let response = await axios.get(`${apiUrl}/animeMovies/`);
       console.log(response.data);
-      props.setMovies(response.data.animes);
+      props.setMovies(response.data.movies);
     } catch (ex) {
       console.log(ex);
     }
@@ -88,7 +88,7 @@ const AnimeMovieItem = (props) => {
   };
 
   return (
-    <div>
+    <div className="animeMovieItem">
       <form onSubmit={handleSubmit}>
         <input
           onChange={handleNameChange}

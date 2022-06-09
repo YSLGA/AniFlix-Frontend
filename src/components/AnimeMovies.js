@@ -10,7 +10,7 @@ const AnimeMovies = (props) => {
 
   const postAnimeMovie = async () => {
     let payload = {
-      name: name,
+      title: name,
       yearReleased: year,
       genre: genre,
       image: image,
@@ -24,7 +24,7 @@ const AnimeMovies = (props) => {
     try {
       let response = await axios.get(`${apiUrl}/animeMovies/`);
       console.log(response.data);
-      props.setAnime(response.data.movies);
+      props.setMovies(response.data.movies);
     } catch (ex) {
       console.log(ex);
     }
@@ -53,8 +53,8 @@ const AnimeMovies = (props) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="animeMovies">
+      <form className="movie-text-fields"onSubmit={handleSubmit}>
         <input
           onChange={handleNameChange}
           value={name}
@@ -65,21 +65,21 @@ const AnimeMovies = (props) => {
           onChange={handleYearChange}
           value={year}
           type="text"
-          placeholder="year released"
+          placeholder="Year Released"
         />
         <input
           onChange={handleGenreChange}
           value={genre}
           type="text"
-          placeholder="genre"
+          placeholder="Genre"
         />
         <input
           type="text"
           value={image}
           onChange={handleImageChange}
-          placeholder="image"
+          placeholder="Image"
         />
-        <input type="submit" value="add to list" />
+        <input type="submit" value="add to movie list" />
       </form>
       <ul>{props.movies}</ul>
     </div>
