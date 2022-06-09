@@ -8,6 +8,7 @@ import Team from "./components/Team";
 import Home from "./Home";
 import AnimeMovies from "./components/AnimeMovies";
 import AnimeMovieItem from "./components/AnimeMovieItem";
+import "./App.css";
 
 const App = () => {
   const [animes, setAnimes] = useState([]);
@@ -65,13 +66,22 @@ const App = () => {
   });
 
   return (
-    <div>
+    <div className="App">
       <nav>
         <ul>
-          <Link to="/">Home</Link>
-          <Link to="/animes">Anime Shows</Link>
-          <Link to="/movies">Anime Movies</Link>
-          <Link to="/Team">Team</Link>
+          <Link to="/">
+            {" "}
+            <li>Home</li>
+          </Link>
+          <Link to="/animes">
+            <li>Anime Shows</li>
+          </Link>
+          <Link to="/movies">
+            <li>Anime Movies</li>
+          </Link>
+          <Link to="/team">
+            <li>Team</li>
+          </Link>
         </ul>
       </nav>
 

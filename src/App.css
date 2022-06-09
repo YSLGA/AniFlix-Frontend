@@ -1,0 +1,32 @@
+.App{
+    background-color: rgb(177, 173, 173);
+    text-align: center;
+}
+
+.App nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.App nav ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    flex-wrap: wrap;
+}
+
+.App nav ul li{
+    margin-right: 2rem;
+    font-size: 1.75rem;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.App nav ul li:hover{
+    /* color: rgb(187, 184, 184); */
+    text-decoration: underline;
+}
+
