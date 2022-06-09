@@ -59,7 +59,7 @@ const AnimeMovies = (props) => {
           onChange={handleNameChange}
           value={name}
           type="text"
-          placeholder="name"
+          placeholder="Enter Anime Movie"
         />
         <input
           onChange={handleYearChange}
