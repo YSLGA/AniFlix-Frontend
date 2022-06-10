@@ -89,7 +89,7 @@ const AnimeMovieItem = (props) => {
 
   return (
     <div className="animeMovieItem">
-      <form onSubmit={handleSubmit}>
+      <form className="animeMovieItem-text-fields" onSubmit={handleSubmit}>
         <input
           onChange={handleNameChange}
           value={title}
@@ -115,7 +115,7 @@ const AnimeMovieItem = (props) => {
           placeholder="image"
         />
         <input type="submit" value="edit" />
-        <button onClick={handleClick}>delete</button>
+        <button className="delete-btn" onClick={handleClick}>delete</button>
       </form>
 
       <ul>
@@ -123,7 +123,7 @@ const AnimeMovieItem = (props) => {
           <p>Name: {id.title}</p>
           <p>Year Released: {id.yearReleased}</p>
           <p>Genre: {id.genre}</p>
-          <img src={id.image} alt="single anime movie cover" />
+          <img className="anime-item" src={id.image} alt="single anime movie cover" />
         </li>
       </ul>
     </div>
