@@ -41,7 +41,7 @@ const App = () => {
 
   const displayAnime = animes.map((anime) => {
     return (
-      <Link to={"/animes/" + anime._id}>
+      <Link to={"/animes/" + anime._id} style={{ textDecoration: 'none' }}>
         <li key={anime._id}>
           <p>Title: {anime.name}</p>
           <p>Year Released: {anime.yearReleased}</p>
@@ -54,7 +54,7 @@ const App = () => {
 
   const displayMovies = movies.map((movie, key) => {
     return (
-      <Link to={"/movies/" + movie._id}>
+      <Link to={"/movies/" + movie._id} style={{ textDecoration: 'none' }}>
         <li key={key}>
           <p>Title: {movie.title}</p>
           <p>Year Released: {movie.yearReleased}</p>
@@ -69,17 +69,16 @@ const App = () => {
     <div className="App">
       <nav>
         <ul>
-          <Link to="/">
-            {" "}
+          <Link to="/" style={{ textDecoration: 'none' }}>
             <li>Home</li>
           </Link>
-          <Link to="/animes">
+          <Link to="/animes" style={{ textDecoration: 'none' }}>
             <li>Anime Shows</li>
           </Link>
-          <Link to="/movies">
+          <Link to="/movies" style={{ textDecoration: 'none' }}>
             <li>Anime Movies</li>
           </Link>
-          <Link to="/team">
+          <Link to="/team" style={{ textDecoration: 'none' }}>
             <li>Team</li>
           </Link>
         </ul>
