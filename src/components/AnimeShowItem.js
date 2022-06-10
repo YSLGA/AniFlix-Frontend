@@ -120,7 +120,7 @@ const AnimeShowItem = (props) => {
 
       <ul>
         <li>
-          <p>Name: {id.name}</p>
+          <p>Title: {id.name}</p>
           <p>Year Released: {id.yearReleased}</p>
           <p>Genre: {id.genre}</p>
           <img className="anime-item"src={id.image} alt="single anime cover" />

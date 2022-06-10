@@ -120,7 +120,7 @@ const AnimeMovieItem = (props) => {
 
       <ul>
         <li>
-          <p>Name: {id.title}</p>
+          <p>Title: {id.title}</p>
           <p>Year Released: {id.yearReleased}</p>
           <p>Genre: {id.genre}</p>
           <img className="anime-item" src={id.image} alt="single anime movie cover" />

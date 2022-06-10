@@ -81,6 +81,14 @@
 
 .animeShowItem ul{
     list-style: none;
+    padding-left: 0px;
+    text-decoration: none;
+}
+
+.animeShowItem ul li p{
+    font-size: 1.3rem;
+    color: black;
+    text-decoration: none;
 }
 
 .animeMovieItem-text-fields {
@@ -101,6 +109,14 @@
 
 .animeMovieItem ul{
     list-style: none;
+    padding-left: 0px;
+    text-decoration: none;
+}
+
+.animeMovieItem ul li p{
+    font-size: 1.3rem;
+    color: black;
+    text-decoration: none;
 }
 
 .delete-btn{
@@ -114,6 +130,13 @@
 
 .animeShows ul{
     list-style: none;
+    padding-left: 0px;
+}
+
+.animeShows ul li p{
+    font-size: 1.3rem;
+    color: black;
+    text-decoration: none;
 }
 
 .animeShows ul li img{
@@ -128,6 +151,15 @@
 
 .animeMovies ul{
     list-style: none;
+    padding-left: 0px;
+    text-decoration: none;
+}
+
+.animeMovies ul li p{
+    font-size: 1.3rem;
+    color: black;
+    text-decoration: none;
+    
 }
 
 .animeMovies ul li img{
