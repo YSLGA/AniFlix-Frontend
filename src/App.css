@@ -1,5 +1,5 @@
 .App {
-  background-color: rgb(177, 173, 173);
+  background-color: rgb(170, 168, 168);
   text-align: center;
 }
 
@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  background-color: rgb(230, 223, 223);
 }
 
 .App nav ul {
@@ -16,6 +17,7 @@
   text-decoration: none;
   flex-wrap: wrap;
   list-style-type: none;
+  padding-left: 0px;
 }
 
 .App nav ul li {
@@ -48,121 +50,133 @@
   border-radius: 10px;
 }
 .movie-text-fields {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-.movie-text-fields input {
-    display: flex;
-    margin-right: 1.5rem;
-    padding: 15px;
-    outline: none;
-    background: #f5f5f5;
-    font-size: 16px;
-    border-radius: 10px;
-  }
- 
-.animeShowItem-text-fields {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-.animeShowItem-text-fields input {
-    display: flex;
-    margin-right: 1.5rem;
-    padding: 15px;
-    outline: none;
-    background: #f5f5f5;
-    font-size: 16px;
-    border-radius: 10px;
-  }
-
-.animeShowItem ul{
-    list-style: none;
-    padding-left: 0px;
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.animeShowItem ul li p{
-    font-size: 1.3rem;
-    color: black;
-    text-decoration: none;
+.movie-text-fields input {
+  display: flex;
+  margin-right: 1.5rem;
+  padding: 15px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.animeShowItem-text-fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animeShowItem-text-fields input {
+  display: flex;
+  margin-right: 1.5rem;
+  padding: 15px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.animeShowItem ul {
+  list-style: none;
+  padding-left: 0px;
+  text-decoration: none;
+}
+
+.animeShowItem ul li p {
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
 }
 
 .animeMovieItem-text-fields {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .animeMovieItem-text-fields input {
-    display: flex;
-    margin-right: 1.5rem;
-    padding: 15px;
-    outline: none;
-    background: #f5f5f5;
-    font-size: 16px;
-    border-radius: 10px;
-  }
-
-.animeMovieItem ul{
-    list-style: none;
-    padding-left: 0px;
-    text-decoration: none;
+  display: flex;
+  margin-right: 1.5rem;
+  padding: 15px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+  border-radius: 10px;
 }
 
-.animeMovieItem ul li p{
-    font-size: 1.3rem;
-    color: black;
-    text-decoration: none;
+.animeMovieItem ul {
+  list-style: none;
+  padding-left: 0px;
+  text-decoration: none;
 }
 
-.delete-btn{
-    padding: 15px;
-    outline: none;
-    background: #f5f5f5;
-    font-size: 16px;
-    border-radius: 10px; 
+.animeMovieItem ul li p {
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
 }
 
-
-.animeShows ul{
-    list-style: none;
-    padding-left: 0px;
+.delete-btn {
+  padding: 15px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+  border-radius: 10px;
 }
 
-.animeShows ul li p{
-    font-size: 1.3rem;
-    color: black;
-    text-decoration: none;
+.animeShows ul {
+  list-style: none;
+  padding-left: 0px;
 }
 
-.animeShows ul li img{
-    width: 450px;
-    height: 375px;
+.animeShows ul li p {
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
 }
 
-.anime-item{
-    width: 450px;
-    height: 375px; 
+.animeShows ul li:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
 }
 
-.animeMovies ul{
-    list-style: none;
-    padding-left: 0px;
-    text-decoration: none;
+.animeShows ul li img {
+  width: 450px;
+  height: 375px;
 }
 
-.animeMovies ul li p{
-    font-size: 1.3rem;
-    color: black;
-    text-decoration: none;
-    
+.anime-item {
+  width: 450px;
+  height: 375px;
 }
 
-.animeMovies ul li img{
-    width: 450px;
-    height: 375px;
+.animeMovies ul {
+  list-style: none;
+  padding-left: 0px;
+  text-decoration: none;
+}
+
+.animeMovies ul li p {
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
+}
+
+.animeMovies ul li:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+.animeMovies ul li img {
+  width: 450px;
+  height: 375px;
+}
+
+.home p{
+  font-size: 4rem;
 }
