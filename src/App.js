@@ -43,7 +43,7 @@ const App = () => {
     return (
       <Link to={"/animes/" + anime._id}>
         <li key={anime._id}>
-          <p>Name: {anime.name}</p>
+          <p>Title: {anime.name}</p>
           <p>Year Released: {anime.yearReleased}</p>
           <p>Genre: {anime.genre}</p>
           <img src={anime.image} alt="anime cover" />
