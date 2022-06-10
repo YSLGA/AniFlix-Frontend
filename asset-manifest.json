@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/anime-list-frontend/static/css/main.9d58d687.css",
-    "main.js": "/anime-list-frontend/static/js/main.b10a2984.js",
+    "main.css": "/anime-list-frontend/static/css/main.04770e46.css",
+    "main.js": "/anime-list-frontend/static/js/main.cb389820.js",
     "static/media/zeke.png": "/anime-list-frontend/static/media/zeke.c87d79131dad7db54f86.png",
     "static/media/kevin.png": "/anime-list-frontend/static/media/kevin.90f0c17fa15984355985.png",
     "static/media/imran.png": "/anime-list-frontend/static/media/imran.d366819447943f5cb826.png",
     "index.html": "/anime-list-frontend/index.html",
-    "main.9d58d687.css.map": "/anime-list-frontend/static/css/main.9d58d687.css.map",
-    "main.b10a2984.js.map": "/anime-list-frontend/static/js/main.b10a2984.js.map"
+    "main.04770e46.css.map": "/anime-list-frontend/static/css/main.04770e46.css.map",
+    "main.cb389820.js.map": "/anime-list-frontend/static/js/main.cb389820.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d58d687.css",
-    "static/js/main.b10a2984.js"
+    "static/css/main.04770e46.css",
+    "static/js/main.cb389820.js"
   ]
 }
