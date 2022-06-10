@@ -12,7 +12,7 @@
 }
 
 .App nav ul {
-  display: flex;
+  display: inline-block;
   list-style: none;
   text-decoration: none;
   flex-wrap: wrap;
@@ -35,7 +35,7 @@
 }
 
 .show-text-fields {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
@@ -51,7 +51,7 @@
   border-radius: 10px;
 }
 .movie-text-fields {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
@@ -68,7 +68,7 @@
 }
 
 .animeShowItem-text-fields {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
@@ -97,7 +97,7 @@
 }
 
 .animeMovieItem-text-fields {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
@@ -183,4 +183,60 @@
 
 .home p{
   font-size: 4rem;
+}
+
+.teamimage img {
+    max-width: 50%;
+}
+
+@media (min-width: 768px) {
+    .animeMovies ul {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 15px;
+    }
+
+    .animeShows ul {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 15px;
+    }
+
+    .show-text-fields {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+    
+    .App nav ul {
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding-left: 0px;
+    }
+
+    .animeShowItem-text-fields {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+      }
+    
+      .animeMovieItem-text-fields {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+      }
+      .movie-text-fields {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+      }
 }
