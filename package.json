@@ -1,7 +1,7 @@
 {
   "name": "animelist",
   "version": "0.1.0",
-  "homepage": "https://YSLGA.github.io/anime-list-frontend",
+  "homepage": "https://YSLGA.github.io/AniFlix-Frontend/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
