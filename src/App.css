@@ -1,0 +1,242 @@
+.App {
+  background-color: rgb(170, 168, 168);
+  text-align: center;
+}
+
+.App nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: rgb(233, 140, 103);
+}
+
+.App nav ul {
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.App nav ul li {
+  margin-right: 2rem;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  list-style-type: none;
+}
+
+.App nav ul li:hover {
+  /* color: rgb(187, 184, 184); */
+  text-decoration: underline;
+}
+
+.show-text-fields {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.show-text-fields input {
+  display: flex;
+  margin-right: 1.5rem;
+  padding: 15px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.movie-text-fields {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.movie-text-fields input {
+  display: flex;
+  margin-right: 1.5rem;
+  padding: 15px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.animeShowItem-text-fields {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.animeShowItem-text-fields input {
+  display: flex;
+  margin-right: 1.5rem;
+  padding: 15px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.animeShowItem ul {
+  list-style: none;
+  padding-left: 0px;
+  text-decoration: none;
+}
+
+.animeShowItem ul li p {
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
+}
+
+.animeMovieItem-text-fields {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.animeMovieItem-text-fields input {
+  display: flex;
+  margin-right: 1.5rem;
+  padding: 15px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.animeMovieItem ul {
+  list-style: none;
+  padding-left: 0px;
+  text-decoration: none;
+}
+
+.animeMovieItem ul li p {
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
+}
+
+.delete-btn {
+  padding: 15px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.animeShows ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.animeShows ul li p {
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
+}
+
+.animeShows ul li:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+.animeShows ul li img {
+  width: 450px;
+  height: 375px;
+}
+
+.anime-item {
+  width: 450px;
+  height: 375px;
+}
+
+.animeMovies ul {
+  list-style: none;
+  padding-left: 0px;
+  text-decoration: none;
+}
+
+.animeMovies ul li p {
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
+}
+
+.animeMovies ul li:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+.animeMovies ul li img {
+  width: 450px;
+  height: 375px;
+}
+
+.home p{
+  font-size: 4rem;
+}
+
+.teamimage img {
+    max-width: 50%;
+}
+
+@media (min-width: 768px) {
+    .animeMovies ul {
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 15px;
+    }
+
+    .animeShows ul {
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 15px;
+    }
+
+    .show-text-fields {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+    
+    .App nav ul {
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding-left: 0px;
+    }
+
+    .animeShowItem-text-fields {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+      }
+    
+      .animeMovieItem-text-fields {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+      }
+      .movie-text-fields {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+      }
+}
